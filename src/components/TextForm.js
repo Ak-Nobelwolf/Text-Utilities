@@ -15,9 +15,14 @@ export default function TextForm(props) {
     setText(newText);
   };
 
-  //Function to Capitalize First Letter of each Sentence
+  // Function to Capitalize First Letter of each Sentence
   const capitalizeFirstLetterOfSentences = () => {
-    let newText = text.replace(/\. *([a-z])/g, (match) => match.toUpperCase());
+    let newText = text.replace(
+      /(^|[.!?]) *([a-z])/g,
+      (match, previous, current) => {
+        return previous + " " + current.toUpperCase();
+      }
+    );
     setText(newText);
   };
 
