@@ -35,37 +35,57 @@ export default function About(props) {
             <div className="mb-3">
               <h3>Text Transformation:</h3>
               <ul className="list-group">
-                <li className="list-group-item">Convert to Upper Case</li>
-                <li className="list-group-item">Convert to Lower Case</li>
-                <li className="list-group-item">
+                <li className="list-group-item" style={textColor}>
+                  Convert to Upper Case
+                </li>
+                <li className="list-group-item" style={textColor}>
+                  Convert to Lower Case
+                </li>
+                <li className="list-group-item" style={textColor}>
                   Capitalize First Letter of Each Sentence
                 </li>
-                <li className="list-group-item">
+                <li className="list-group-item" style={textColor}>
                   Capitalize First Letter of Each Word
                 </li>
-                <li className="list-group-item">Remove Extra Spaces</li>
-                <li className="list-group-item">Reverse Text</li>
-                <li className="list-group-item">Paste Text</li>
+                <li className="list-group-item" style={textColor}>
+                  Remove Extra Spaces
+                </li>
+                <li className="list-group-item" style={textColor}>
+                  Reverse Text
+                </li>
+                <li className="list-group-item" style={textColor}>
+                  Paste Text
+                </li>
               </ul>
             </div>
             <div className="mb-3">
               <h3>Text Analysis:</h3>
               <ul className="list-group">
-                <li className="list-group-item">Word Count</li>
-                <li className="list-group-item">Character Count</li>
-                <li className="list-group-item">Reading Time Estimate</li>
+                <li className="list-group-item" style={textColor}>
+                  Word Count
+                </li>
+                <li className="list-group-item" style={textColor}>
+                  Character Count
+                </li>
+                <li className="list-group-item" style={textColor}>
+                  Reading Time Estimate
+                </li>
               </ul>
             </div>
             <div className="mb-3">
               <h3>Text Manipulation:</h3>
               <ul className="list-group">
-                <li className="list-group-item">Copy to Clipboard</li>
+                <li className="list-group-item" style={textColor}>
+                  Copy to Clipboard
+                </li>
               </ul>
             </div>
             <div className="mb-3">
               <h3>User Interaction:</h3>
               <ul className="list-group">
-                <li className="list-group-item">Clear Text Area</li>
+                <li className="list-group-item" style={textColor}>
+                  Clear Text Area
+                </li>
               </ul>
             </div>
           </div>
@@ -77,16 +97,16 @@ export default function About(props) {
           <div className="col-md-8">
             <h2 className="mb-3">Usage</h2>
             <ol className="list-group">
-              <li className="list-group-item">
+              <li className="list-group-item" style={textColor}>
                 Enter or paste your text in the provided textarea.
               </li>
-              <li className="list-group-item">
+              <li className="list-group-item" style={textColor}>
                 Explore the various transformation and analysis options.
               </li>
-              <li className="list-group-item">
+              <li className="list-group-item" style={textColor}>
                 Copy the transformed text or analyze the text statistics.
               </li>
-              <li className="list-group-item">
+              <li className="list-group-item" style={textColor}>
                 Enjoy a responsive and user-friendly experience!
               </li>
             </ol>
