@@ -11,6 +11,7 @@ Welcome to the Text Utilities React project! This web application is designed to
   - Capitalize First Letter of Each Word
   - Remove Extra Spaces
   - Reverse Text
+  - Paste Text
 
 - **Text Analysis:**
   - Word Count
