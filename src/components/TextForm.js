@@ -78,14 +78,14 @@ export default function TextForm(props) {
     setText(event.target.value);
   };
 
-  let wordCount = text.split(" ").length;
+  let wordCount = text.split(/\s+/).filter((element)=>{return element.length !== 0}).length;
   let charCount = text.length;
-  let timeToRead = (0.008 * charCount).toFixed(2);
+  let timeToRead = (0.008 * wordCount).toFixed(2);
 
   //Setting background color for the text area based on props
   const textAreaBackground = {
-    backgroundColor: props.mode === "success" ? "white" : "grey",
-    color: props.mode === "success" ? "black" : "white",
+    backgroundColor: props.mode === "success" ? "white" : "#d5d1d1",
+    color: props.mode === "success" ? "black" : "black",
   };
 
   //Setting background color for the container based on props
@@ -115,42 +115,49 @@ export default function TextForm(props) {
           <button
             className={`btn btn-${props.mode} col-md-2 mx-2 my-1`}
             onClick={handleUpercase}
+            disabled = {text.length === 0}
           >
             Convert to UpperCase
           </button>
           <button
             className={`btn btn-${props.mode} col-md-2 mx-2 my-1`}
             onClick={handleLowercase}
+            disabled = {text.length === 0}
           >
             Convert to LowerCase
           </button>
           <button
             className={`btn btn-${props.mode} col-md-2 mx-2 my-1`}
             onClick={capitalizeFirstLetterOfSentences}
+            disabled = {text.length === 0}
           >
             Capitalize Sentences
           </button>
           <button
             className={`btn btn-${props.mode} col-md-2 mx-2 my-1`}
             onClick={capitalizeFirstLetterOfWords}
+            disabled = {text.length === 0}
           >
             Capitalize Words
           </button>
           <button
             className={`btn btn-${props.mode} col-md-2 mx-2 my-1`}
             onClick={handleRemoveSpacesClick}
+            disabled = {text.length === 0}
           >
             Remove Extra Spaces
           </button>
           <button
             className={`btn btn-${props.mode} col-md-2 mx-2 my-1`}
             onClick={handleReverseClick}
+            disabled = {text.length === 0}
           >
             Reverse Text
           </button>
           <button
             className={`btn btn-${props.mode} col-md-2 mx-2 my-1`}
             onClick={handleCopyClick}
+            disabled = {text.length === 0}
           >
             Copy Text
           </button>
@@ -164,6 +171,7 @@ export default function TextForm(props) {
           <button
             className={`btn btn-${props.mode} col-md-2 mx-2 my-1`}
             onClick={handleClearClick}
+            disabled = {text.length === 0}
           >
             Clear Text
           </button>
@@ -179,7 +187,7 @@ export default function TextForm(props) {
         <p>
           {charCount > 0
             ? text
-            : "Enter something in the text box above to preview here"}
+            : "Nothing to Preview here!"}
         </p>
       </div>
     </>
